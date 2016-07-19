@@ -40,5 +40,4 @@ multisite_convert_{{ id }}:
   - cwd: {{ map.docroot }}/{{ id }}
   - name: '/usr/local/bin/wp core multisite-convert'
   - user: {{ map.www_user }}
-  - unless: /usr/local/bin/wp core is-installed --path="{{ map.docroot }}/{{ id }}"
 {% endfor %}
