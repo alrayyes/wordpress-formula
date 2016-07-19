@@ -24,6 +24,7 @@ wordpress-config:
       username: {{ username }}
       database: {{ database }}
       password: {{ password }}
+      url: {{ url }}
 
 wordpress-htaccess:
   file.managed:
