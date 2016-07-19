@@ -10,7 +10,7 @@ wordpress:
             dbhost: localhost
             dbuser: siteAdbuser
             dbpass: siteAdbpass
-            url: http://siteA.com
+            url: siteA.com
             title: 'siteA title'
             email: siteA@email.com
         sitenameB.com:
@@ -20,7 +20,7 @@ wordpress:
             dbhost: localhost
             dbuser: siteBdbuser
             dbpass: siteBdbpass
-            url: http://siteB.com
+            url: siteB.com
             title: 'siteB title'
             email: siteB@email.com
     lookup:
