@@ -31,7 +31,7 @@ configure_{{ id }}:
 install_{{ id }}:
  cmd.run:
   - cwd: {{ map.docroot }}/{{ id }}
-  - name: '/usr/local/bin/wp core install --url="http://{{ site.get('url') }}" --title="{{ site.get('title') }}" --admin_user="{{ site.get('username') }}" --admin_password="{{ site.get('password') }}" --admin_email="{{ site.get('email') }}" --path="{{ map.docroot }}/{{ id }}/"'
+  - name: '/usr/local/bin/wp core multisite-install --url="http://{{ site.get('url') }}" --title="{{ site.get('title') }}" --admin_user="{{ site.get('username') }}" --admin_password="{{ site.get('password') }}" --admin_email="{{ site.get('email') }}" --path="{{ map.docroot }}/{{ id }}/"'
   - user: {{ map.www_user }}
   - unless: /usr/local/bin/wp core is-installed --path="{{ map.docroot }}/{{ id }}"
 {% endfor %}
