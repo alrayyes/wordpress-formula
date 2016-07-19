@@ -38,6 +38,6 @@ install_{{ id }}:
 multisite_convert_{{ id }}:
  cmd.run:
   - cwd: {{ map.docroot }}/{{ id }}
-  - name: '/usr/local/bin/wp core multisite-convert'
+  - name: '/usr/local/bin/wp core multisite-convert --subdomains'
   - user: {{ map.www_user }}
 {% endfor %}
